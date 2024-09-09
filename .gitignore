@@ -38,3 +38,4 @@ yarn-error.log*
 # tools
 .eslintcache
 tsconfig.tsbuildinfo
+package-lock.json

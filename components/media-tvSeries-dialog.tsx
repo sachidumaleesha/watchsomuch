@@ -18,23 +18,23 @@ interface MediaTrailerDialogProps {
   id: number
 }
 
-export const MediaFullMovieDialog: React.FC<MediaTrailerDialogProps> = ({
+export const MediaTvSeriesDialog: React.FC<MediaTrailerDialogProps> = ({
   id,
 }) => {
   const [selectedServer, setSelectedServer] = useState(
-    process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_1
+    process.env.NEXT_PUBLIC_TV_SERVER_URL_1
   )
 
   const servers = [
-    { name: "Server 1", url: process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_1 },
-    { name: "Server 2", url: process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_2 },
-    { name: "Server 3", url: process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_3 },
-    { name: "Server 4", url: process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_4 },
-    { name: "Server 5", url: process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_5 },
-    { name: "Server 6", url: process.env.NEXT_PUBLIC_MOVIE_SERVER_URL_6 },
+    { name: "Server 1", url: process.env.NEXT_PUBLIC_TV_SERVER_URL_1 },
+    { name: "Server 2", url: process.env.NEXT_PUBLIC_TV_SERVER_URL_2 },
+    { name: "Server 3", url: process.env.NEXT_PUBLIC_TV_SERVER_URL_3 },
+    { name: "Server 4", url: process.env.NEXT_PUBLIC_TV_SERVER_URL_4 },
+    { name: "Server 5", url: process.env.NEXT_PUBLIC_TV_SERVER_URL_5 },
+    { name: "Server 6", url: process.env.NEXT_PUBLIC_TV_SERVER_URL_6 },
   ]
 
-  const movieUrl = `${selectedServer}${id}`
+  const tvSeriesUrl = `${selectedServer}${id}`
 
   const handleServerChange = (value: string) => {
     const selected = servers.find(server => server.name === value)
@@ -47,7 +47,7 @@ export const MediaFullMovieDialog: React.FC<MediaTrailerDialogProps> = ({
   return (
     <Dialog modal>
       <DialogTrigger className={cn(buttonVariants())}>
-        <Play className="mr-2 size-4" /> Watch Full Movie
+        <Play className="mr-2 size-4" /> Watch Now
       </DialogTrigger>
 
       <DialogContent className="max-w-screen-lg">
@@ -66,7 +66,7 @@ export const MediaFullMovieDialog: React.FC<MediaTrailerDialogProps> = ({
 
         <iframe
           className="aspect-square size-full rounded-md sm:aspect-video"
-          src={movieUrl}
+          src={tvSeriesUrl}
           allowFullScreen
         />
       </DialogContent>

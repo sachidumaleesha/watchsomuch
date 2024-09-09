@@ -33,10 +33,11 @@ export const siteConfig = {
     vercel: "https://vercel.com",
     tmdb: "https://www.themoviedb.org",
     shadcn: "https://ui.shadcn.com/",
+    reportBug: "https://github.com/oktay/movies/issues/new",
   },
   author: {
-    name: "Oktay Colakoglu",
-    web: "https://oktaycolakoglu.com",
+    name: "watchsomuch",
+    web: "https://watchsomuch.cc",
   },
 }
 

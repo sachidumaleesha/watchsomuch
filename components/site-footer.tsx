@@ -46,52 +46,6 @@ export const SiteFooter: React.FC<ComponentProps<"footer">> = () => {
                 </a>{" "}
                 &mdash; All rights reserved.
               </p>
-              <p>
-                Built with{" "}
-                <a
-                  href={siteConfig.links.next}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground"
-                >
-                  <Icons.Next className="inline size-3 fill-current align-middle" />{" "}
-                  Next.js
-                </a>{" "}
-                and{" "}
-                <a
-                  href={siteConfig.links.shadcn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground"
-                >
-                  <Icons.Shadcn className="inline size-3 fill-current align-middle" />{" "}
-                  shadcn/ui
-                </a>
-                . Powered by{" "}
-                <a
-                  href={siteConfig.links.vercel}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground"
-                >
-                  <Icons.Vercel className="inline size-3 fill-current align-middle" />{" "}
-                  Vercel
-                </a>
-                .
-              </p>
-
-              <p className="mt-8">
-                Data provided by{" "}
-                <a
-                  href={siteConfig.links.tmdb}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground"
-                >
-                  TMDB
-                </a>
-                .
-              </p>
             </div>
 
             <div className="hidden gap-2 md:flex">
@@ -101,8 +55,8 @@ export const SiteFooter: React.FC<ComponentProps<"footer">> = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Icons.Github className="inline size-4 fill-current align-middle md:mr-2" />
-                <span className="sr-only md:not-sr-only">Source code</span>
+                <Icons.Coffee className="inline size-4 fill-current align-middle md:mr-2" />
+                <span className="sr-only md:not-sr-only">Buy me a coffee</span>
               </a>
 
               <a

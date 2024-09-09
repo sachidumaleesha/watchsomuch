@@ -91,16 +91,16 @@ export default async function DetailLayout({
             dangerouslySetInnerHTML={{ __html: format.content(overview) }}
           />
 
-          <div className="flex flex-row gap-4 items-center">
+          <div className="flex items-center gap-4 flex-row">
             <MediaTrailerDialog videos={videos?.results} />
-            <MediaFullMovieDialog videos={videos?.results} id={id}/>
+            <MediaFullMovieDialog id={id}/>
           </div>
         </div>
       </MediaDetailView.Hero>
 
       <MediaDetailView.Content>
         <Tabs className="mt-12 w-full">
-          <div className="max-w-screen scrollbar-hidden -mx-8 overflow-x-scroll px-8 lg:m-0 lg:p-0">
+          <div className="max-w-screen -mx-8 px-8 overflow-x-scroll scrollbar-hidden lg:m-0 lg:p-0">
             <TabsList>
               <TabsLink href={`/movie/${id}`}>Overview</TabsLink>
               <TabsLink href={`/movie/${id}/credits`}>Credits</TabsLink>
