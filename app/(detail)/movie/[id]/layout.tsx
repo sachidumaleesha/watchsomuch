@@ -10,6 +10,7 @@ import { MediaDetailView } from "@/components/media-detail-view"
 import { MediaPoster } from "@/components/media-poster"
 import { MediaRating } from "@/components/media-rating"
 import { MediaTrailerDialog } from "@/components/media-trailer-dialog"
+import { MediaFullMovieDialog } from "@/components/media-fullmovie-dialog"
 
 interface DetailLayoutProps {
   params: {
@@ -90,7 +91,10 @@ export default async function DetailLayout({
             dangerouslySetInnerHTML={{ __html: format.content(overview) }}
           />
 
-          <MediaTrailerDialog videos={videos?.results} />
+          <div className="flex flex-row gap-4 items-center">
+            <MediaTrailerDialog videos={videos?.results} />
+            <MediaFullMovieDialog videos={videos?.results} id={id}/>
+          </div>
         </div>
       </MediaDetailView.Hero>
 
